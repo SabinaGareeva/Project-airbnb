@@ -1,5 +1,5 @@
 body {
-  font-family: 'Messina Sans', sans-serif;
+  font-family: "Messina Sans", sans-serif;
   margin: 0;
   color: #222222;
   background-color: #ffffff;
@@ -38,7 +38,7 @@ img {
   margin-left: auto;
 }
 
-.row>* {
+.row > * {
   box-sizing: border-box;
   flex-shrink: 0;
   width: 100%;
@@ -79,7 +79,7 @@ img {
 }
 
 .header-nav__link {
-  font-family: 'Messina Sans', sans-serif;
+  font-family: "Messina Sans", sans-serif;
   font-weight: 400;
   padding: 10px 0;
   border: 0;
@@ -91,7 +91,7 @@ img {
 
 .header-nav__link::after,
 .link-active::after {
-  content: '';
+  content: "";
   height: 1.5px;
   position: absolute;
   bottom: 0;
@@ -138,8 +138,6 @@ img {
   justify-content: space-between;
 }
 
-
-
 /* banner */
 .banner {
   background-image: url(../images/banner/night-city.jpg);
@@ -149,7 +147,6 @@ img {
   background-size: cover;
   padding: 48px 0;
 }
-
 
 .banner-description {
   display: inline-flex;
@@ -168,7 +165,6 @@ img {
 .banner-title span {
   font-size: 48px;
   line-height: 52px;
-
 }
 
 .banner-subtitle {
@@ -208,168 +204,30 @@ main {
   padding: 73.4px 0 457.8px;
 }
 
-
-
-
-
-
-/* cards */
-.cards {
-  padding: 30px 0;
+/* section explore */
+.explore {
+  margin-top: 20px;
 }
-
-.card-wrapper {
-  position: relative;
-  width: 25%;
-  display: inline-flex;
-  flex: 0 0 auto;
+.explore-title {
+  font-size: 55px;
+  line-height: 52px;
+  margin-bottom: 24px;
+  color: var(--nav-link-color);
 }
-
-
-.card {
-  margin-bottom: 30px;
+.main-story {
+  width: 660px;
 }
-
-.card img {
-  max-width: 100%;
-  height: 313px;
-  vertical-align: middle;
-  /* убираем зазор снизу */
+.main-story img {
+  border-radius: 16px;
+  filter: brightness(80%);
   object-fit: cover;
-  border-radius: 8px;
 }
-
-.card-image {
-  min-height: 313px;
-  border-radius: 8px;
-  position: relative;
-  margin-bottom: 16px;
+.additional-stories {
+  width: 400px;
 }
-
-.card-link {
-  display: block;
-  height: 100%;
-  width: 100%;
-  outline: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: transparent;
-  z-index: 1;
-  /* пользователь может перейти по ссылке на новой вкладке */
+.stories-card{
+  background-color: aqua;
 }
-
-.card-heart {
-  display: inline-block;
-  fill: rgba(0, 0, 0, 0.5);
-  height: 24px;
-  width: 24px;
-  stroke: #FFFFFF;
-  stroke-width: 2;
-  vertical-align: middle;
-  position: absolute;
-  /* перекрытие кликабельной ссылки на карточке */
-  z-index: 1;
-  cursor: pointer;
-  top: 18px;
-  right: 18px;
-}
-
-.heart-active {
-  fill: #FF385C;
-}
-
-.card-host {
-  padding: 4px 8px;
-  border-radius: 6px;
-  background-color: #fff;
-  position: absolute;
-  top: 18px;
-  left: 18px;
-  font-size: 14px;
-  font-weight: 600;
-  color: #222;
-}
-
-.card-text__title {
-  white-space: nowrap;
-  overflow-x: hidden;
-  text-overflow: ellipsis;
-  max-width: 230px;
-}
-
-.card-text__title,
-.card-text__rating {
-  font-size: 14px;
-  margin-bottom: 8px;
-  font-weight: 600;
-}
-
-.text-secondary {
-  font-size: 14px;
-  font-weight: normal;
-  margin-bottom: 8px;
-  color: #5E5E5E;
-}
-
-.card-text__descr {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.card-text__price {
-  width: 48%;
-}
-
-.price-prev {
-  text-decoration: line-through;
-  font-weight: 600;
-}
-
-.price-current {
-  font-weight: 600;
-  color: #222222;
-  position: relative;
-}
-
-.price-current::after {
-  content: '';
-  display: inline-block;
-  width: 2px;
-  height: 2px;
-  background-color: #5E5E5E;
-  border-radius: 50%;
-  margin-left: 4px;
-  vertical-align: middle;
-  position: absolute;
-  top: 50%;
-  margin-top: -1px;
-}
-
-h3 {
-  font-size: 16px;
-  color: #222222;
-  line-height: 19px;
-}
-
-.km,
-.date {
-  color: #717171;
-  font-size: 12px;
-  line-height: 14px;
-}
-
-.night {
-  color: #222222;
-  font-size: 14px;
-  line-height: 17px;
-}
-
 
 /* footer */
 .footer {
@@ -419,7 +277,65 @@ h3 {
 .footer-link:hover {
   text-decoration: underline;
 }
+.footer-bottom {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid #e5e7eb;
+}
+.flex-container-left {
+  width: 350px;
+  font-weight: 400;
+  font-size: 14px;
+}
 
+.flex-container-right {
+  width: 320px;
+  font-weight: 500;
+  font-size: 14px;
+}
+.nav-link-footer {
+  color: var(--footer-link-color);
+}
+.nav-link-footer::before {
+  content: "";
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background-color: var(--footer-link-color);
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 11px;
+}
+
+.nav-link-footer:first-child::before {
+  display: none;
+}
+
+.social-media {
+  display: inline-flex;
+}
+.social-media svg path {
+  fill: var(--footer-link-color);
+}
+.globe svg {
+  margin-right: 7px;
+}
+.globe svg circle,
+.globe svg ellipse,
+.globe svg line {
+  stroke: var(--footer-link-color);
+}
+.currency svg path {
+  stroke: var(--footer-link-color);
+}
+
+.globe-footer {
+  padding-top: 3px;
+}
+
+.wrapper:last-child {
+  width: 100px;
+}
 
 /* .dropdown-button */
 .dropdown-button {
@@ -474,7 +390,6 @@ h3 {
   position: absolute;
   right: 0;
   top: 50%;
-  /* max-height: calc(100vh - 100px); */
   overflow-y: auto;
   min-width: 240px;
 }
@@ -501,15 +416,13 @@ h3 {
   background-color: var(--bg-hover);
 }
 
-
-
 /* skeleton */
 .skeleton {
   position: relative;
 }
 
 .skeleton::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -530,9 +443,6 @@ h3 {
     background-position: 100% 0;
   }
 }
-
-
-
 
 /* утилиты */
 
