@@ -206,8 +206,9 @@ main {
 
 /* section explore */
 .explore {
-  margin-top: 20px;
-  margin-bottom: 100px;
+  padding: 20px;
+  padding: 100px;
+  background-color: var(--body-color);
 }
 .explore-title {
   font-size: 55px;
