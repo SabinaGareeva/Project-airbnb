@@ -146,6 +146,44 @@
     
         <footer class="modal-footer"></footer>
       </dialog>
+      <h1>Tabs component</h1>
+<section class="tabs">
+      <div class="container">
+        <div class="tabs-list">
+          <button class="tabs-btn tabs-btn__active" data-tabs-path="amazing">Amazing views</button>
+          <button class="tabs-btn" data-tabs-path="islands">Islands</button>
+          <button class="tabs-btn" data-tabs-path="trending">Trending</button>
+          <button class="tabs-btn" data-tabs-path="treehouses">Treehouses</button>
+        </div>
+
+        <div class="tabs-content tabs-content__active" data-tabs-target="amazing">
+          <div class="content">
+            <h2>Button 1</h2>
+            <p>Lorem, ipsum dolor. 1</p>
+          </div>
+        </div>
+
+        <div class="tabs-content" data-tabs-target="islands">
+          <div class="content">
+            <h2>Button 2</h2>
+            <p>Lorem, ipsum dolor. 2</p>
+          </div>
+        </div>
+
+        <div class="tabs-content" data-tabs-target="trending">
+          <div class="content">
+            <h2>Button 3</h2>
+            <p>Lorem, ipsum dolor. 3</p>
+          </div>
+        </div>
+        <div class="tabs-content" data-tabs-target="treehouses">
+          <div class="content">
+            <h2>Button 4</h2>
+            <p>Lorem, ipsum dolor. 3</p>
+          </div>
+        </div>
+      </div>
+    </section>
       <section class="cards">
         <div class="container">
           <div class="flex-start row">
@@ -362,6 +400,9 @@
         </div>
         <!-- /.container -->
       </section>
+      <script src="lib/swiper.js"></script>
+  <script src="js/theme-switcher.js"></script>
+  <script type="module" src="js/stays.js"></script>
     
 </body>
 </html>

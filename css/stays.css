@@ -19,7 +19,7 @@
     height: 313px;
     vertical-align: middle;
     /* убираем зазор снизу */
-    object-fit: cover;
+     object-fit: cover;
     border-radius: 8px;
   }
   
@@ -43,7 +43,7 @@
     background: transparent;
     z-index: 1;
     /* пользователь может перейти по ссылке на новой вкладке */
-  }
+   } 
   
   .card-heart {
     display: inline-block;
@@ -152,4 +152,4 @@
     color: #222222;
     font-size: 14px;
     line-height: 17px;
-  }
+  } 
