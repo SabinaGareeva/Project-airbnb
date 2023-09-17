@@ -20,3 +20,24 @@ document.addEventListener('DOMContentLoaded', () => {
       document.querySelector(`[data-tabs-target="${path}"]`).classList.add('tabs-content__active');
     }
   })
+  /* initialize swiper shop page */
+const swiper2 = new Swiper('.swiper', {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  pagination: {
+    el: ".swiper-pagination",
+  },
+});
+
+/* handler for hearts active */
+const hearts = document.querySelectorAll('.whishlist-heart-help');
+
+hearts.forEach(heart => {
+  heart.addEventListener('click', () => {
+    heart.classList.toggle('heart-active');
+  })
+})
