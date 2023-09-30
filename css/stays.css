@@ -8,7 +8,7 @@
 .stays-card {
   width: 300px;
   margin-bottom: 40px;
-  background: #ffffff;
+  background: var(--body-color);
   border-radius: 6px;
 }
 
@@ -20,14 +20,14 @@
   margin-right: 9px;
 }
 
-.card-image-help {
+.card-image-stays {
   position: relative;
   border-radius: 6px;
   margin-bottom: 16px;
 
 }
 
-.card-image-help img {
+.card-image-stays img {
   vertical-align: middle;
   width: inherit;
   min-height: 255px;
@@ -35,7 +35,7 @@
   object-fit: cover;
 }
 
-.card-image-help::after {
+.card-image-stays::after {
   content: "";
   opacity: 0;
   position: absolute;
@@ -50,7 +50,7 @@
   transition-timing-function: ease-out;
 }
 
-.stays-card:hover .card-image-help::after {
+.stays-card:hover .card-image-stays::after {
   opacity: 0.1;
 }
 
@@ -77,19 +77,19 @@
 }
 
 
-.card-title-help {
+.card-title-stays {
   font-weight: 600;
   font-size: 16px;
   text-transform: none;
-  color: #2d2d2d;
+  color: var(--nav-link-color);
 }
 
-.card-subtitle-help {
+.card-subtitle-stays {
   font-weight: 400;
   font-size: 14px;
   margin-top: 8px;
   text-transform: capitalize;
-  color: #737373;
+  color: var(--subtitle-color);
 }
 
 .price-prev-stays
@@ -98,7 +98,7 @@
   font-size: 15px;
   margin-top: 12px;
   display: inline-block;
-  color: #2d2d2d;
+  color: var(--nav-link-color);
   margin-right: 8px;
 }
 .price-prev-stays-p{

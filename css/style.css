@@ -5,6 +5,7 @@ body {
   background-color: #ffffff;
   position: relative;
   min-height: 100vh;
+  background-color: var(--body-color);
 }
 
 * {
@@ -206,8 +207,7 @@ main {
 
 /* section explore */
 .explore {
-  padding: 20px;
-  padding: 100px;
+  margin: 50px 0;
   background-color: var(--body-color);
 }
 .explore-title {
@@ -216,9 +216,9 @@ main {
   margin-bottom: 24px;
   color: var(--nav-link-color);
 }
-.explore-flex{
+.explore-flex {
   display: flex;
- justify-content:space-between;
+  justify-content: space-between;
 }
 .main-story {
   width: 700px;
@@ -230,7 +230,7 @@ main {
   filter: brightness(80%);
   object-fit: cover;
 }
-.bookmark{
+.bookmark {
   width: 32px;
   height: 32px;
   border-radius: 16px;
@@ -240,10 +240,10 @@ main {
   top: 0.75rem;
   right: 0.75rem;
 }
-.bookmark svg{
- justify-content: center;
+.bookmark svg {
+  justify-content: center;
 }
-.story-title{
+.story-title {
   font-size: 16px;
   font-weight: 600;
   color: #fff;
@@ -251,7 +251,7 @@ main {
   bottom: 6rem;
   left: 0.75rem;
 }
-.story-subtitle{
+.story-subtitle {
   font-size: 32px;
   font-weight: 500;
   color: #fff;
@@ -259,7 +259,7 @@ main {
   bottom: 4rem;
   left: 0.75rem;
 }
-.story-description{
+.story-description {
   color: #fff;
   position: absolute;
   position: absolute;
@@ -270,31 +270,31 @@ main {
 .additional-stories {
   width: 565px;
 }
-.stories-card{
+.stories-card {
   background-color: rgb(240 247 252/1);
   padding: 0.82rem 0.88rem;
   border-radius: 8px;
-  border: 1px solid rgb(224 238 250/1);;
-position: relative;
-margin-bottom: 7px;
-display: flex;
-align-items: center;
+  border: 1px solid rgb(224 238 250/1);
+  position: relative;
+  margin-bottom: 7px;
+  display: flex;
+  align-items: center;
 }
-.stories-card img{
+.stories-card img {
   width: 97px;
   border-radius: 8px;
   margin-right: 20px;
 }
-.stories-card p{
+.stories-card p {
   font-size: 16px;
   margin-bottom: 10px;
 }
-.stories-card p:nth-child(2){
+.stories-card p:nth-child(2) {
   font-weight: 600;
   font-size: 20px;
   margin-right: 7px;
 }
-.stories-card p:nth-child(3){
+.stories-card p:nth-child(3) {
   margin-bottom: 0px;
 }
 

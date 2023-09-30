@@ -74,3 +74,18 @@ textarea:focus {
   --checkbox-mark-color: #222222;
   --checkbox-border-color: rgba(255, 255, 255, 0.6);
 }
+
+/* табы */
+.line,
+.tabs-btn,
+.tabs-btn__active::after {
+  --tabs-color: #BB86FC;
+}
+
+.tabs-btn__active:hover {
+  --tabs-opacity: 0.5;
+}
+
+.login-wrapper {
+  --login-wrapper-color: #979797
+}
