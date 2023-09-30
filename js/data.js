@@ -1,8 +1,8 @@
 export const data = [
     {
         id: '1',
-        name: "Armchair",
-        category: "Chair",
+        name: "Search tips",
+        category: "Searching for stays",
         rating: "4.9",
         price: "50.2",
         description: "Accessible environment",
@@ -11,8 +11,8 @@ export const data = [
     },
     {
         id: '2',
-        name: "Bed",
-        category: "Bed",
+        name: "Pandemic",
+        category: "During the pandemic",
         rating: "3.0",
         price: "102.10",
         description: "Cancellation during the pandemic",

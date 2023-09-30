@@ -25,8 +25,7 @@
 }
 
 .details-card {
-  width: 400px;
-  background: var(--dark-blue);
+  width: 700px;
   border-radius: 12px;
   margin: 26px 0;
   padding: 8px;
@@ -71,7 +70,8 @@
 }
 
 .details-information {
-  max-width: 500px;
+  max-width: 700px;
+  margin-right: 10rem;
 }
 
 .information-descrption {
