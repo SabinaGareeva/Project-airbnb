@@ -29,7 +29,7 @@ document.addEventListener("click", (event) => {
   }
 });
 /* модалка become a host */
-const modal = document.querySelector("#modal"); // получение доступа к модалке
+const modal = document.querySelector("#modal-question"); // получение доступа к модалке
 const host = document.querySelector("#host"); // доступ к Become a host
 const closeModal = document.querySelector("#close-button"); // доступ к кнопке Close Modal внутри модалки
 

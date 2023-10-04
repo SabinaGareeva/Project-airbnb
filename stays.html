@@ -165,77 +165,61 @@
         </div>
       </div>
     </header>
-    <dialog class="modal" id="modal">
+    <dialog class="modal" id="modal-question">
       <header class="modal-header">
         <button id="close-button" class="button close-button">
-          <svg
-            viewBox="0 0 32 32"
-            xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true"
-            role="presentation"
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation"
             focusable="false"
-            style="
-              display: block;
-              fill: none;
-              height: 16px;
-              width: 16px;
-              stroke-width: 3;
-              overflow: visible;
-            "
-          >
+            style="display: block; fill: none; height: 16px; width: 16px; stroke: currentcolor; stroke-width: 3; overflow: visible;">
             <path d="m6 6 20 20"></path>
             <path d="m26 6-20 20"></path>
           </svg>
         </button>
       </header>
-
+  
       <section class="modal-body">
-        <h2 class="modal-title">Questions about this home?</h2>
-        <p class="modal-subtitle">
-          We’re excited you’re here. A Villa Specialist from Luxury Retreats, an
-          Airbnb <br />
-          company, will be in touch to finalize the details.
-        </p>
-
-        <form action="#">
+        <h2 class="modal-body__title">Questions about this home?</h2>
+        <p class="modal-body__subtitle">We’re excited you’re here. A Villa Specialist from Luxury Retreats, an Airbnb
+          company, will be in touch to finalize the details.</p>
+  
+        <form id="form-modal">
           <div class="inline">
-            <label for="first-name">First name *</label>
-            <input id="first-name" type="text" placeholder="First name" />
-
-            <label for="last-name">Last name *</label>
-            <input id="last-name" type="text" placeholder="Last name" />
+              <label for="firstName"></label>
+              <input id="firstName" type="text" placeholder="First name*">
+              <div class="error-text"></div>
+  
+              <label for="lastName"></label>
+              <input id="lastName" type="text" placeholder="Last name*">
           </div>
-
+  
           <div class="inline ml-8">
-            <label for="email">Email *</label>
-            <input id="email" type="email" placeholder="Your email" />
-
-            <label for="tel">Telephone</label>
-            <input id="tel" type="tel" placeholder="Telephone" />
+              <label for="email"></label>
+              <input id="email" type="text" placeholder="Email*">
+  
+              <label for="phone"></label>
+              <input id="phone" type="tel" placeholder="Telephone">
           </div>
-
-          <label for="text-message">Your message</label>
-          <textarea
-            placeholder="For example: Is this home family friendly? What other homes should I consider?"
-            name="text-message"
-            id=""
-            cols="30"
-            rows="5"
-          ></textarea>
-
-          <input type="checkbox" class="modal-checkbox" id="text-message" />
-          <label for="text-message"
-            >I'd like to receive marketing and policy communications from Luxury
-            Retreats</label
-          >
-
-          <button class="btn btn-primary mt-16" type="button">
-            Send message
-          </button>
+  
+            <label for="text-message">Your message</label>
+            <textarea name="text" id="text-modal" cols="30" rows="10"
+              placeholder="For example: Is this home family friendly? What other homes should I consider?">
+            </textarea>
+  
+            <input type="checkbox" class="modal-checkbox">
+            <label for="text-message">I'd like to receive marketing and policy communications from Luxury
+              Retreats</label>
+  
+          <button class="btn btn-primary mt-16" type="submit">Send message</button>
         </form>
       </section>
-
-      <footer class="modal-footer"></footer>
+  
+      <footer class="modal-footer">
+        <div class="modal-footer__flex">
+          <span> Learn how we handle your details in our </span>
+          <a href="#" target="_blank" class="btn btn-link">Privacy policy</a>
+        </div>
+      </footer>
+  
     </dialog>
     
     <section class="tabs">
