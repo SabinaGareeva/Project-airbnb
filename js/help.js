@@ -172,9 +172,178 @@ document.addEventListener('click', (event) => {
   }
 })
 
+/* модалка ask question */
+
+  const modal = document.querySelector('#modal-question');
+  const openModal = document.querySelector('.btn-ask');
+  const closeModal = document.querySelector('#close-button');
+
+  if(openModal!==null){openModal.addEventListener("click", () => {
+    modal.showModal();
+  });
+
+  closeModal.addEventListener("click", () => {
+    modal.close();
+  })}
 
 
+/* функционал получения/записи пользовательских сообщений */
+// класс пользовательских данных 
+class Message {
+  constructor(firstName, lastName, email, phone) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.email = email;
+    this.phone = phone;
+  }
+}
 
+
+// класс для отображения наших данных
+class UI {
+  static displayMessages() {
+    const messages = Store.getMessages();
+
+    messages.forEach(message => UI.addMessageTolist(message));
+  }
+
+  static addMessageTolist(message) {
+    const list = document.querySelector('#messages-list');
+    if(list!==null){const row = document.createElement('tr');
+
+    row.innerHTML = `
+      <td class="w-200">${message.firstName}</td>
+      <td class="w-200">${message.lastName}</td>
+      <td class="w-200">${message.email}</td>
+      <td class="w-200">${message.phone}</td>
+      <td><a href="#" class="icon-delete">x</a></td>
+    `;
+
+    list.appendChild(row);}
+ 
+  }
+
+  static deleteMessage(element) {
+    if (element.classList.contains('icon-delete')) {
+      element.parentElement.parentElement.remove();
+    }
+  }
+}
+
+
+// класс для хранения/записи/получения данных из localStorage
+class Store {
+  static getMessages() {
+    let messages;
+
+    if (localStorage.getItem('messages') === null) {
+      messages = [];
+    } else {
+      messages = JSON.parse(localStorage.getItem('messages'));
+    }
+
+    return messages;
+  }
+
+  static addMessage(message) {
+    const messages = Store.getMessages();
+    messages.push(message);
+    localStorage.setItem('messages', JSON.stringify(messages));
+
+    // snackbar.show('Запись добавлена!');
+     // показ уведомления
+  }
+
+  static removeMessage(phone) {
+    const messages = Store.getMessages();
+
+    messages.forEach((message, index) => {
+      if (message.phone === phone) {
+        messages.splice(index, 1); // удаление данных из localStorage
+      }
+    })
+
+    localStorage.setItem('messages', JSON.stringify(messages)); // установка значения [] в localStorage
+  }
+}
+
+
+/* валидация инпутов */
+const firstNameInput = document.querySelector('#firstName');
+let firstNameError = document.querySelector('.error-text');
+
+if(firstNameInput!==null){firstNameInput.addEventListener('input', () => {
+  let firstName = firstNameInput.value.trim(); // обрезание символов пробела в начале/конце
+
+  firstName = firstName.replace(/[^a-zA-Zа-яА-Я]/g, ''); // Удаляем все символы, кроме букв кириллицы и латиницы
+
+  firstNameInput.value = firstName; // Присваиваем отфильтрованное значение обратно в поле ввода
+
+  if (firstName === '') {
+    firstNameInput.classList.add('error');
+    firstNameError.textContent = 'Field Required';
+  } else {
+    firstNameInput.classList.remove('error');
+    firstNameError.textContent = '';
+  }
+});
+
+firstNameInput.addEventListener('blur', () => {
+  const firstName = firstNameInput.value.trim();
+
+  if (firstName === '') {
+    firstNameInput.classList.add('error');
+    firstNameError.textContent = 'Field Required';
+  }
+});
+
+firstNameInput.addEventListener('focus', () => {
+  const firstName = firstNameInput.value.trim();
+
+  if (firstName === '') {
+    firstNameInput.classList.add('error');
+    firstNameError.textContent = 'Field Required';
+  }
+});}
+
+
+// обработка получения пользовательских данных
+const formModal =document.querySelector('#form-modal')
+if(formModal!==null){formModal.addEventListener('submit', event => {
+  event.preventDefault(); // предотвращение отправки данных
+
+  const firstName = document.querySelector('#firstName').value;
+  const lastName = document.querySelector('#lastName').value;
+  const email = document.querySelector('#email').value;
+  const phone = document.querySelector('#phone').value;
+
+  if (firstName === '' || lastName === '' || email === '' || phone === '') {
+    alert('Please fill in all fields!');
+  } else {
+    const message = new Message(firstName, lastName, email, phone);  // передаем данные в сущность Message
+
+    UI.addMessageTolist(message); // рисуем данные
+
+    Store.addMessage(message); // передаем данные в стор
+
+    modal.close(); // закрываем модалку
+  }
+});}
+
+
+/* событие удаления записи */
+const messagesList=document.querySelector('#messages-list')
+if(messagesList!==null){messagesList.addEventListener('click', e => {
+  UI.deleteMessage(e.target); // удаление записи из таблицы
+
+  Store.removeMessage(e.target.parentElement.previousElementSibling.textContent);
+
+  // snackbar.show('Запись удалена!'); 
+  // уведомление об удалении записи
+})}
+
+// показ данных из localStorage при загрузке страницы 
+document.addEventListener('DOMContentLoaded', UI.displayMessages);
 
 function init() {
   switch (GLOBAL.currentPage) {
@@ -188,3 +357,9 @@ function init() {
 }
 
 document.addEventListener('DOMContentLoaded', init);
+
+
+
+
+
+
